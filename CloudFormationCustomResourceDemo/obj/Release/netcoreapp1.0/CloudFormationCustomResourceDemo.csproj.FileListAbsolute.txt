@@ -1,6 +1,0 @@
-c:\users\administrator\documents\visual studio 2017\Projects\CloudFormationCustomResourceDemo\CloudFormationCustomResourceDemo\bin\Release\netcoreapp1.0\CloudFormationCustomResourceDemo.deps.json
-c:\users\administrator\documents\visual studio 2017\Projects\CloudFormationCustomResourceDemo\CloudFormationCustomResourceDemo\bin\Release\netcoreapp1.0\CloudFormationCustomResourceDemo.dll
-c:\users\administrator\documents\visual studio 2017\Projects\CloudFormationCustomResourceDemo\CloudFormationCustomResourceDemo\bin\Release\netcoreapp1.0\CloudFormationCustomResourceDemo.pdb
-c:\users\administrator\documents\visual studio 2017\Projects\CloudFormationCustomResourceDemo\CloudFormationCustomResourceDemo\obj\Release\netcoreapp1.0\CloudFormationCustomResourceDemo.AssemblyInfo.cs
-c:\users\administrator\documents\visual studio 2017\Projects\CloudFormationCustomResourceDemo\CloudFormationCustomResourceDemo\obj\Release\netcoreapp1.0\CloudFormationCustomResourceDemo.dll
-c:\users\administrator\documents\visual studio 2017\Projects\CloudFormationCustomResourceDemo\CloudFormationCustomResourceDemo\obj\Release\netcoreapp1.0\CloudFormationCustomResourceDemo.pdb
