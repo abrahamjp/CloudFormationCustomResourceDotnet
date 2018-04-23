@@ -37,5 +37,5 @@ Use this .NET Core Lambda template to provision AWS resources that isn't nativel
 
 ## How Clouformation calls lambda.  
 
-Cloudformation invokes lambda function with a set of [parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/crpg-ref-requests.html), of which one is S3 presigned callback Url called "ResponseURL". This needs to be invoked after the function completes the resoruce provisioning. The CfnResponse class included in the template takes care of this.
+Cloudformation invokes lambda function with a set of [parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/crpg-ref-requests.html), of which one is S3 presigned callback Url called "ResponseURL". This needs to be invoked after the function completes the resource provisioning. The CfnResponse class included in the template takes care of this.
 
