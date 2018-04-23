@@ -1,0 +1,74 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS Custom resource demo",
+  "Resources": {
+    "CreateOpenIDProvider": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Description": "Function to demo custom resource template with .NET Core lambda",
+        "MemorySize": 256,
+        "Handler": "CloudFormationCustomResourceDemo::CloudFormationCustomResourceDemo.Function::FunctionHandler",
+        "Role": {
+          "Fn::GetAtt": [
+            "IAMAccessRole",
+            "Arn"
+          ]
+        },
+        "Timeout": 30,
+        "Runtime": "dotnetcore1.0",
+        "Code": {
+          "S3Bucket": "replace_with_s3_bucket_name",
+          "S3Key": "replace_with_object_path"
+        }
+      }
+    },
+    "IAMAccessRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/replace_with_iam_policy"
+        ],
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Action": [
+                "sts:AssumeRole"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "CustomResourceDotnetLambdaFn": {
+      "Type": "Custom::MyDotnetLambdaFn",
+      "Properties": {
+        "ServiceToken": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:aws:lambda:",
+              {
+                "Ref": "AWS::Region"
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId"
+              },
+              ":function:",
+              {
+                "Ref": "MyDotnetLambdaFn"
+              }
+            ]
+          ]
+        }
+      }
+    }
+  }
+}
