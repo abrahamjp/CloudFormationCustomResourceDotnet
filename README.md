@@ -1,6 +1,6 @@
 # AWS CloudFormation .NET Lambda CustomResource Template
 
-Use this .NET Core Lambda template to provision AWS resources that isn't natevily supported by CloudFormation.
+Use this .NET Core Lambda template to provision AWS resources that isn't natively supported by CloudFormation.
 
 ```C#
   CfnResponse cfn = new CfnResponse();
